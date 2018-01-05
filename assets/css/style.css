@@ -1,6 +1,7 @@
 body {
 	font-family: 'Nunito', sans-serif;
 	background-color: #000;
+	background-image: url("https://github.com/ericsteinman/TriviaGame/blob/master/assets/images/GameBackground.jpg?raw=true");
 }
 
 h1 {
