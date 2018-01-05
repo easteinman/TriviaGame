@@ -1,17 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="UTF-8">
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="https://github.com/ericsteinman/TriviaGame/blob/master/assets/images/HallowsFavicon.png?raw=true" type="image/x-icon">
 
   <title>Harry Potter Trivia</title>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
   <!-- CSS Files -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -19,45 +14,85 @@
   <!-- Font Files -->
   <link href="https://fonts.googleapis.com/css?family=Julee|Nunito" rel="stylesheet">
 
-  </head>
+</head>
 
 <body>
+<div id="page">
 
-<!--Page Wrapper DIV-->
-<div class="container">
+  <h1>Crystal Collector</h1>
+
+  <div id="instructions">
+    <h2>Instructions</h2>
+    <hr>
+    <p>You will be given a random number at the start of the game.
+    
+    <br><br>
+
+    There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+
+    <br><br>
+
+    You <b>win</b> the game by matching you total score to the random number. You <b>lose</b> the game if your total score goes above the random number.
+
+    <br><br>
+
+    The value of each crystal is hidden from you until you click on it.
+
+    <br><br>
+
+    Each time when the game starts, the game will change the value of each crystal.
+
+    </p>
+  </div>
+  <!-- End of "instructions" div-->
+  
 
 
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-          <label class="form-check-label" for="inlineRadio1">1</label>
-        </div>
+  <div id="random-number">
+    <h2>Random Number</h2>
+    <hr>
+      <p class="displayNumber">Random Number Here</p>
+  </div>
+  <!-- End of "random-number" div -->
 
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-          <label class="form-check-label" for="inlineRadio2">2</label>
-        </div>
+  <div id="userTotal">
+    <h2>Your Total</h2>
+    <hr>
+      <p class="totalCounter">Score Goes Here</p>
+  </div>
+  <!-- End of "userTotal" div -->
 
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
-          <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
-        </div>
+    <div id="counter">
+    <h2>Score</h2>
+    <hr>
+      <p class ="winCounter">Wins: 0</p>
+      <p class ="lossCounter">Losses: 0</p>
+  </div>
+  <!-- End of "counter" div -->
 
 
-<!-- End of Page Wrapper-->
+  <div id="crystals">
+    <img src="https://github.com/ericsteinman/week-4-game/blob/master/assets/images/crystal1.png?raw=true" height="200" width="200" alt="Crystal1" class="crystalImage" id="crystal1">
+
+    <img src="https://github.com/ericsteinman/week-4-game/blob/master/assets/images/crystal2.png?raw=true" height="200" width="200" alt="Crystal2" class="crystalImage" id="crystal2">
+
+    <img src="https://github.com/ericsteinman/week-4-game/blob/master/assets/images/crystal3.png?raw=true" height="200" width="200" alt="Crystal3" class="crystalImage" id="crystal3">
+
+    <img src="https://github.com/ericsteinman/week-4-game/blob/master/assets/images/crystal4.png?raw=true" height="200" width="200" alt="Crystal4" class="crystalImage" id="crystal4">
+  </div>
+  <!-- End of "crystals" div -->
+
+
+
 </div>
+<!-- End of Page Wrapper-->
 
 
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery.js"></script>
 
-  <!-- Javascript File -->
+  <!-- JavascriptcFile -->
   <script type="text/javascript" src="assets/javascript/game.js"></script>
-
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
 </body>
 
 </html>
