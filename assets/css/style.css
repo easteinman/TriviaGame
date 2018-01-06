@@ -1,43 +1,45 @@
 body {
-	font-family: 'Nunito', sans-serif;
+	color: #fff;
 	background-color: #000;
 	background-image: url("https://github.com/ericsteinman/TriviaGame/blob/master/assets/images/GameBackground.jpg?raw=true");
+	background-size: 100%;
 }
 
 h1 {
-	font-family: 'Julee', cursive;
+	font-family: 'Fontdiner Swanky', cursive;
 	font-size: 50px;
 	color: #fff;
 }
 
 h2 {
-	font-family: 'Julee', cursive;
+	font-family: 'IM Fell English SC', serif;
     color: #fff;
     font-style: bold;
     text-align: center;
 }
 
 
-p {
-	color: #fff;
-}
-
 #page {
     width: 960px;
 	margin: 0 auto;
 }
 
-#instructions {
+#title {
+	width: 75%;
+	margin-left: 120px;
+}
+
+#questions {
 	float: left;
-	width: 630px;
-	margin-left: 100px;
+	width: 75%;
+	margin-left: 80px;
 	margin-bottom: 20px;
 	padding: 20px;
 	border-style: solid;
-	border-width: 2px;
-	border-color: #5627ad;
+	border-width: 5px;
+	border-color: #FFFF00;
 	border-radius: 25px;
-	background-color: #43124f;
+	background-color: #800000;
 	text-align: center;
 }
 
