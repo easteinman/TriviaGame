@@ -19,6 +19,19 @@ p.question {
     text-align: center;
 }
 
+button {
+	font-family: 'Almendra', serif;
+	color: #fff;
+	font-size: 40px;
+	padding: 15px;
+	margin-bottom: 20px;
+	color: #ffffff;
+	background-color: #000;
+	border-width: 5px;
+	border-radius: 25px;
+ 	border-color: #FFFF00;
+}
+
 #page {
     width: 960px;
 	margin: 0 auto;
@@ -35,7 +48,6 @@ p.question {
 	border-style: solid;
 	border-width: 5px;
 	border-color: #FFFF00;
-	border-radius: 25px;
 	background-color: #800000;
 	text-align: center;
 }
