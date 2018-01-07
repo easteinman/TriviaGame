@@ -7,31 +7,28 @@ body {
 
 h1 {
 	font-family: 'Fontdiner Swanky', cursive;
-	font-size: 50px;
+	font-size: 75px;
 	color: #fff;
 }
 
-h2 {
-	font-family: 'IM Fell English SC', serif;
+p.question {
+	font-family: 'Almendra', serif;
+	font-size: 25px;
     color: #fff;
     font-style: bold;
     text-align: center;
 }
-
 
 #page {
     width: 960px;
 	margin: 0 auto;
 }
 
-#title {
-	width: 75%;
-	margin-left: 120px;
-}
 
-#questions {
+#start, #questions {
 	float: left;
 	width: 75%;
+	margin-top: 100px;
 	margin-left: 80px;
 	margin-bottom: 20px;
 	padding: 20px;
@@ -41,48 +38,4 @@ h2 {
 	border-radius: 25px;
 	background-color: #800000;
 	text-align: center;
-}
-
-#random-number {
-	width: 250px;
-	float: left;
-	margin: 20px;
-	margin-left: 0px;
-	background-color: #5627ad;
-	padding: 10px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #43124f;
-	border-radius: 25px;
-	text-align: center;
-}
-
-#userTotal {
-	width: 250px;
-	float: left;
-	margin: 20px;
-	background-color: #5627ad;
-	padding: 10px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #43124f;
-	border-radius: 25px;
-	text-align: center;
-}
-
-#counter {
-	width: 250px;
-	float: left;
-	margin: 20px;
-	background-color: #5627ad;
-	padding: 10px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #43124f;
-	border-radius: 25px;
-}
-
-#crystals {
-	float: left;
-	margin-left: 25px;
 }
