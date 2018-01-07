@@ -11,6 +11,12 @@ h1 {
 	color: #fff;
 }
 
+h2 {
+	font-family: 'Almendra', serif;
+	font-size: 20px;
+	color: #FFFF00;
+}
+
 p.question {
 	font-family: 'Almendra', serif;
 	font-size: 25px;
@@ -50,4 +56,8 @@ button {
 	border-color: #FFFF00;
 	background-color: #800000;
 	text-align: center;
+}
+
+#show-number {
+
 }
