@@ -1,11 +1,36 @@
-$("#questions").hide();
-$("#end").hide();
+$( document ).ready(function(){
+	console.log("document loaded");
 
-$("button").click(function(){
-        $("#questions").show();
-        $("#start").hide();
-    });
+  $("#questions").hide();
+  $("#end").hide();
 
+  $("button").click(function(){
+    $("#questions").show();
+    $("#start").hide();
+
+
+var userAnswer1 = null;
+var userAnswer2 = null;
+var userAnswer3 = null;
+var userAnswer4 = null;
+var userAnswer5 = null;
+var userAnswer6 = null;
+
+$("input:radio[name=q1]").click(function(){
+   userAnswer1 = $('input:radio[name=q1]:checked').val();
+   console.log(userAnswer1);
+});
+
+
+// Score Variables
+var numCorrect = 0;
+var numIncorrect = 0;
+var numUnanswered = 0;
+
+// Send the scores to the "end" div to display on the page
+  $(".numCorrect").html("Correct Answers: " + numCorrect);
+  $(".numIncorrect").html("Incorrect Answers: " + numIncorrect);
+  $(".numUnanswered").html("Unanswered: " + numUnanswered);
 
 // Countdown variable
 var number = 30;
@@ -41,3 +66,6 @@ function run() {
 
 run();
 
+
+})
+    });
