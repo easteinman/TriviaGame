@@ -2,7 +2,8 @@ body {
 	color: #fff;
 	background-color: #000;
 	background-image: url("https://github.com/ericsteinman/TriviaGame/blob/master/assets/images/GameBackground.jpg?raw=true");
-	background-size: 100%;
+	background-size: 110%;
+	background-attachment: fixed;
 }
 
 h1 {
@@ -56,8 +57,4 @@ button {
 	border-color: #FFFF00;
 	background-color: #800000;
 	text-align: center;
-}
-
-#show-number {
-
 }
