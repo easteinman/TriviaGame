@@ -8,32 +8,52 @@ $( document ).ready(function(){
     $("#questions").show();
     $("#start").hide();
 
+  // Score Variables
+  var numCorrect = 0;
+  var numIncorrect = 0;
+  var numUnanswered = 0;
 
-var userAnswer1 = null;
-var userAnswer2 = null;
-var userAnswer3 = null;
-var userAnswer4 = null;
-var userAnswer5 = null;
-var userAnswer6 = null;
-
-$("input:radio[name=q1]").click(function(){
-   userAnswer1 = $('input:radio[name=q1]:checked').val();
-   console.log(userAnswer1);
-});
-
-
-// Score Variables
-var numCorrect = 0;
-var numIncorrect = 0;
-var numUnanswered = 0;
-
-// Send the scores to the "end" div to display on the page
+  // Send the scores to the "end" div to display on the page
   $(".numCorrect").html("Correct Answers: " + numCorrect);
   $(".numIncorrect").html("Incorrect Answers: " + numIncorrect);
   $(".numUnanswered").html("Unanswered: " + numUnanswered);
 
+  var userAnswer1 = null;
+  var userAnswer2 = null;
+  var userAnswer3 = null;
+  var userAnswer4 = null;
+  var userAnswer5 = null;
+  var userAnswer6 = null;
+
+  var correctAnswer1 = "correct";
+  var correctAnswer2 = "correct";
+  var correctAnswer3 = "correct";
+  var correctAnswer4 = "correct";
+  var correctAnswer5 = "correct";
+  var correctAnswer6 = "correct";
+
+  $("input:radio[name=q1]").click(function(){
+     userAnswer1 = $('input:radio[name=q1]:checked').val();
+     console.log(userAnswer1);
+       if (userAnswer1 == "correct") {
+         numCorrect++;
+         console.log(numCorrect);
+         $(".numCorrect").html("Correct Answers: " + numCorrect);
+
+        }
+
+       else if (userAnswer1 == "wrong") {
+         numIncorrect++;
+         console.log(numIncorrect);
+         $(".numIncorrect").html("Incorrect Answers: " + numIncorrect);
+
+        }
+
+});
+
+
 // Countdown variable
-var number = 30;
+var number = 5;
 
 //  Variable that will hold our interval ID when we execute
 //  the "run" function
