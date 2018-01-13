@@ -73,7 +73,7 @@ $( document ).ready(function(){
 
 
 // Countdown variable
-var number = 30;
+var number = 45;
 
 //  Variable that will hold our interval ID when we execute
 //  the "run" function
