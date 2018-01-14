@@ -1,9 +1,11 @@
 $( document ).ready(function(){
 	console.log("document loaded");
-
+  
+  // When the page load the quetions and end score divs are automatically hidden
   $("#questions").hide();
   $("#end").hide();
-
+  
+  //When the start button is clicked it will hide the start button div and reveal the questions div
   $("button").click(function(){
     $("#questions").show();
     $("#start").hide();
@@ -23,22 +25,27 @@ $( document ).ready(function(){
   var userAnswer5 = null;
   var userAnswer6 = null;
 
-    // Question 1: Registering user input...
+    // Registering user input when the radio button q1 is clicked.
+    // The comments for Question 1 apply for all questions, 1-6.
+    
+    // Question 1
     $("input:radio[name=q1]").click(function(){
+      // Empty userAnswer1 on click immediately in case the user changes their mind and chooses a different answer.
       $(userAnswer1).empty();
+      // The value of the q1 radio button clicked is set as variable userAnswer1
       userAnswer1 = $('input:radio[name=q1]:checked').val();
       console.log(userAnswer1);
 
     });
 
-    // Question 2: Registering user input...
+    // Question 2
     $("input:radio[name=q2]").click(function(){
       $(userAnswer2).empty();
       userAnswer2 = $('input:radio[name=q2]:checked').val();
       console.log(userAnswer2);
 
     });
-    // Question 3: Registering user input...
+    // Question 3
     $("input:radio[name=q3]").click(function(){
       $(userAnswer3).empty();
       userAnswer3 = $('input:radio[name=q3]:checked').val();
@@ -46,7 +53,7 @@ $( document ).ready(function(){
 
     });
 
-    // Question 4: Registering user input...
+    // Question 4
     $("input:radio[name=q4]").click(function(){
       $(userAnswer4).empty();
       userAnswer4 = $('input:radio[name=q4]:checked').val();
@@ -54,7 +61,7 @@ $( document ).ready(function(){
 
     });
 
-    // Question 5: Registering user input...
+    // Question 5
     $("input:radio[name=q5]").click(function(){
       $(userAnswer5).empty();
       userAnswer5 = $('input:radio[name=q5]:checked').val();
@@ -62,7 +69,7 @@ $( document ).ready(function(){
 
     });
 
-    // Question 6: Registering user input...
+    // Question 6
     $("input:radio[name=q6]").click(function(){
       $(userAnswer6).empty();
       userAnswer6 = $('input:radio[name=q6]:checked').val();
@@ -75,159 +82,133 @@ $( document ).ready(function(){
 // Countdown variable
 var number = 45;
 
-//  Variable that will hold our interval ID when we execute
-//  the "run" function
+// Variable that will hold our interval ID when we execute the "run" function
 var intervalId;
 
-//  The run function sets an interval
-//  that runs the decrement function once a second.
+// The run function sets an interval that runs the decrement function once a second.
 function run() {
   intervalId = setInterval(decrement, 1000);
 
     }
 
-    //  The decrement function.
+    // The decrement function.
     function decrement() {
       
-      //  Show the number in the #show-number tag.
+      // Show the var number in the #count-down div.
       $("#count-down").html("<h2> Time Remaining: " + number + " Seconds </h2>");
 
-      //  Decrease number by one.
+      // Decrease number by one.
       number--;
 
-      //  Once number hits zero...
+      // Once number hits zero...
       if (number === 0) {
 
-        //  Get score for question 1...
+        // // Questions 1: Get Score
+        // The notes below for Question 1 apply for all questions, 1-6.
+
+        // Use and 'if statement' to see is userAnswer1 = 'correct'.
         if (userAnswer1 == "correct") {
+          // If userAnswer1 is 'correct', increase the numCorrect variable by 1.
           numCorrect++;
           console.log(numCorrect);
-          $(".numCorrect").html("Correct Answers: " + numCorrect);
-
          }
 
+        // Use an 'else if' statement to check if the answer is 'wrong' if it does not equal 'correct'.
         else if (userAnswer1 == "wrong") {
+
+          // If userAnswer1 is 'wrong', increase the numIncorrect variable by 1.
           numIncorrect++;
           console.log(numIncorrect);
-          $(".numIncorrect").html("Incorrect Answers: " + numIncorrect);
-
          }
 
+        // Finally, use an 'else' statement if neither of the above statements are correct. This is how I register the number of 'unanswered' questions.
         else {
+
+          // If userAnswer1 is unanswered, increase the numUnanswered var by 1.
           numUnanswered++;
           console.log(numUnanswered);
-          $(".numUnanswered").html("Unanswered Answers: " + numUnanswered);
-
          }
 
-        //  Get score for question 2...
+        // Questions 2: Get Score
         if (userAnswer2 == "correct") {
           numCorrect++;
           console.log(numCorrect);
-          $(".numCorrect").html("Correct Answers: " + numCorrect);
 
          }
 
         else if (userAnswer2 == "wrong") {
           numIncorrect++;
           console.log(numIncorrect);
-          $(".numIncorrect").html("Incorrect Answers: " + numIncorrect);
 
          }
 
         else {
           numUnanswered++;
           console.log(numUnanswered);
-          $(".numUnanswered").html("Unanswered Answers: " + numUnanswered);
-
          }
 
-        //  Get score for question 3...
+        // Questions 3: Get Score
         if (userAnswer3 == "correct") {
           numCorrect++;
           console.log(numCorrect);
-          $(".numCorrect").html("Correct Answers: " + numCorrect);
-
          }
 
         else if (userAnswer3 == "wrong") {
           numIncorrect++;
           console.log(numIncorrect);
-          $(".numIncorrect").html("Incorrect Answers: " + numIncorrect);
-
          }
 
         else {
           numUnanswered++;
           console.log(numUnanswered);
-          $(".numUnanswered").html("Unanswered Answers: " + numUnanswered);
-
          }
 
-        //  Get score for question 4...
+        // Questions 4: Get Score
         if (userAnswer4 == "correct") {
           numCorrect++;
           console.log(numCorrect);
-          $(".numCorrect").html("Correct Answers: " + numCorrect);
-
          }
 
         else if (userAnswer4 == "wrong") {
           numIncorrect++;
           console.log(numIncorrect);
-          $(".numIncorrect").html("Incorrect Answers: " + numIncorrect);
-
          }
 
         else {
           numUnanswered++;
           console.log(numUnanswered);
-          $(".numUnanswered").html("Unanswered Answers: " + numUnanswered);
-
          }
 
-        //  Get score for question 5...
+        // Questions 5: Get Score
         if (userAnswer5 == "correct") {
           numCorrect++;
           console.log(numCorrect);
-          $(".numCorrect").html("Correct Answers: " + numCorrect);
-
          }
 
         else if (userAnswer5 == "wrong") {
           numIncorrect++;
           console.log(numIncorrect);
-          $(".numIncorrect").html("Incorrect Answers: " + numIncorrect);
-
          }
 
         else {
           numUnanswered++;
           console.log(numUnanswered);
-          $(".numUnanswered").html("Unanswered Answers: " + numUnanswered);
-
          }
 
-        //  Get score for question 6...
-        if (userAnswer1 == "correct") {
+        // Questions 6: Get Score
+        if (userAnswer6 == "correct") {
           numCorrect++;
           console.log(numCorrect);
-          $(".numCorrect").html("Correct Answers: " + numCorrect);
-
          }
 
         else if (userAnswer6 == "wrong") {
           numIncorrect++;
           console.log(numIncorrect);
-          $(".numIncorrect").html("Incorrect Answers: " + numIncorrect);
-
          }
 
         else {
           numUnanswered++;
           console.log(numUnanswered);
-          $(".numUnanswered").html("Unanswered Answers: " + numUnanswered);
-
          }
 
         // Send the scores to the "end" div to display on the page
@@ -235,7 +216,7 @@ function run() {
         $(".numIncorrect").html("Incorrect Answers: " + numIncorrect);
         $(".numUnanswered").html("Unanswered: " + numUnanswered);
 
-        //  Show the reults div and hide the questions div.
+        //  Show the results "end" div and hide the "questions" div.
         $("#questions").hide();
         $("#end").show();
       }
